@@ -1,0 +1,322 @@
+{
+ "stats": {
+  "suites": 7,
+  "tests": 22,
+  "passes": 22,
+  "pending": 0,
+  "failures": 0
+ },
+ "tests": [
+  {
+   "title": "Try send empty name",
+   "fullTitle": "Contract tests Constructor tests Try send empty name",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try send empty symbol",
+   "fullTitle": "Contract tests Constructor tests Try send empty symbol",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Initialization test",
+   "fullTitle": "Contract tests Constructor tests Initialization test",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try mint less that 2 amount",
+   "fullTitle": "Contract tests Mint tests Try mint less that 2 amount",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try mint _recipient is zero address ",
+   "fullTitle": "Contract tests Mint tests Try mint _recipient is zero address ",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try mint _uri is empty ",
+   "fullTitle": "Contract tests Mint tests Try mint _uri is empty ",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Mint successful",
+   "fullTitle": "Contract tests Mint tests Mint successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Mint 2 successful",
+   "fullTitle": "Contract tests Mint tests Mint 2 successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _operator zero address",
+   "fullTitle": "Contract tests Approval for All tests Try use _operator zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Approval for All successful",
+   "fullTitle": "Contract tests Approval for All tests Approval for All successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use msg.sender not authorized",
+   "fullTitle": "Contract tests Approve tests Try use msg.sender not authorized",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _approved zero address",
+   "fullTitle": "Contract tests Approve tests Try use _approved zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try _tokenId is invalid",
+   "fullTitle": "Contract tests Approve tests Try _tokenId is invalid",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Approve _approved successful",
+   "fullTitle": "Contract tests Approve tests Approve _approved successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use msg.sender not authorized",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use msg.sender not authorized",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _from zero address",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use _from zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _to zero address",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use _to zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _tokenId is invalid",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use _tokenId is invalid",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Transfer successful",
+   "fullTitle": "Contract tests Safe Transfer From tests Transfer successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try _from is zero address",
+   "fullTitle": "Contract tests Burn tests Try _from is zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use msg.sender not authorized",
+   "fullTitle": "Contract tests Burn tests Try use msg.sender not authorized",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Burn NFT from _from account",
+   "fullTitle": "Contract tests Burn tests Burn NFT from _from account",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  }
+ ],
+ "failures": [],
+ "passes": [
+  {
+   "title": "Try send empty name",
+   "fullTitle": "Contract tests Constructor tests Try send empty name",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try send empty symbol",
+   "fullTitle": "Contract tests Constructor tests Try send empty symbol",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Initialization test",
+   "fullTitle": "Contract tests Constructor tests Initialization test",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try mint less that 2 amount",
+   "fullTitle": "Contract tests Mint tests Try mint less that 2 amount",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try mint _recipient is zero address ",
+   "fullTitle": "Contract tests Mint tests Try mint _recipient is zero address ",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try mint _uri is empty ",
+   "fullTitle": "Contract tests Mint tests Try mint _uri is empty ",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Mint successful",
+   "fullTitle": "Contract tests Mint tests Mint successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Mint 2 successful",
+   "fullTitle": "Contract tests Mint tests Mint 2 successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _operator zero address",
+   "fullTitle": "Contract tests Approval for All tests Try use _operator zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Approval for All successful",
+   "fullTitle": "Contract tests Approval for All tests Approval for All successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use msg.sender not authorized",
+   "fullTitle": "Contract tests Approve tests Try use msg.sender not authorized",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _approved zero address",
+   "fullTitle": "Contract tests Approve tests Try use _approved zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try _tokenId is invalid",
+   "fullTitle": "Contract tests Approve tests Try _tokenId is invalid",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Approve _approved successful",
+   "fullTitle": "Contract tests Approve tests Approve _approved successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use msg.sender not authorized",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use msg.sender not authorized",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _from zero address",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use _from zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _to zero address",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use _to zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use _tokenId is invalid",
+   "fullTitle": "Contract tests Safe Transfer From tests Try use _tokenId is invalid",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Transfer successful",
+   "fullTitle": "Contract tests Safe Transfer From tests Transfer successful",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try _from is zero address",
+   "fullTitle": "Contract tests Burn tests Try _from is zero address",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Try use msg.sender not authorized",
+   "fullTitle": "Contract tests Burn tests Try use msg.sender not authorized",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  },
+  {
+   "title": "Burn NFT from _from account",
+   "fullTitle": "Contract tests Burn tests Burn NFT from _from account",
+   "file": "test\\erc721.test.js",
+   "currentRetry": 0,
+   "err": {}
+  }
+ ]
+}

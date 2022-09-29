@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\ERC721.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> ERC721.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.04% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>14/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>67/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//SPDX-License-Identifier: MIT
+pragma solidity 0.8.16;
+&nbsp;
+import "./interfaces/IERC721TokenReceiver.sol";
+import "hardhat/console.sol";
+&nbsp;
+&nbsp;
+ /// @notice This contact follows the standard for ERC-721 non fungible tokens
+ /// @dev Comment follow the Ethereum ´Natural Specification´ language format (´natspec´)
+ /// Referencia: https://docs.soliditylang.org/en/v0.8.16/natspec-format.html  
+contract ERC721 {
+&nbsp;
+    /// STATE VARIABLES
+    string public name;
+    string public symbol;
+    uint256 public totalSupply;
+    uint256 public tokenIndex;
+&nbsp;
+    /// STATE MAPPINGS
+    mapping(address =&gt; uint256) public balanceOf;
+    mapping(uint256 =&gt; address) public ownerOf;
+    mapping(uint256 =&gt; bool) private tokenID;
+&nbsp;
+    /// @notice A distinct Uniform Resource Identifier (URI) for a given asset.
+    /// @dev URIs are defined in RFC 3986. The URI may point to a JSON file 
+    /// that conforms to the "ERC721 Metadata JSON Schema".
+    mapping(uint256 =&gt; string) public tokenURI;
+    mapping(uint256 =&gt; address) public approved;
+    mapping(address =&gt; mapping(address =&gt; bool)) public operator;    
+&nbsp;
+    /// EVENTS
+    /// @notice Trigger when NFTs are transferred, created (`from` == 0) and destroyed
+    ///  (`to` == 0). Exception: during contract creation.
+    event Transfer(address indexed _from, address indexed _to, uint256 _tokenId);
+&nbsp;
+    /// @notice Trigger on any successful call to `approve` method. When approved address for
+    /// an NFT is changed or reaffirmed
+    event Approval(address indexed _owner, address indexed _approved, uint256 _tokenId);
+&nbsp;
+    /// @notice Trigger when an operator is enabled or disabled for an owner.
+    event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
+&nbsp;
+    /**
+     * @notice Initialize the state of the contract
+     * @dev Throw if `_name` is empty. Message: "constructor - Invalid parameter: _name"
+     * @dev Throw if `_symbol` is empty. Message: "constructor - Invalid parameter: _symbol"
+     * @param _name The name of the NFT collection
+     * @param _symbol The symbol of the NFT collection
+     */
+    constructor(string memory _name, string memory _symbol) {
+        string memory _methodName = 'constructor';
+        _isEmptyString(_name, _methodName, '_name');
+        _isEmptyString(_symbol, _methodName, '_symbol');
+        name = _name;
+        symbol = _symbol;
+    }
+&nbsp;
+    /// EXTERNAL FUNCTIONS
+&nbsp;
+    /// @notice Transfers the ownership of an NFT from one address to another address
+    /// @dev Throws if `msg.sender` is not the current owner, an authorized operator, 
+    /// or the approved address for the NFT. Message: "safeTransferFrom - Not authorized"
+    /// @dev Throws if `_to` is not capable of receiving NFTs. Message: 
+    /// "safeTransferFrom - Not capable of receiving NFTs"
+    /// @dev Throw if `_from` is zero address. Message: "safeTransferFrom - Invalid parameter: _from"
+    /// @dev Throw if `_to` is zero address. Message: "safeTransferFrom - Invalid parameter: _to"
+    /// @dev Throw if `_tokenId` is invalid, AKA less then totalSupply. Message: 
+    /// "safeTransferFrom - Invalid parameter: _tokenId"
+    /// @param _from The address of the current owner of the NFT
+    /// @param _to The address of the new owner of the NFT
+    /// @param _tokenId The token identifier of the NFT to transfer
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external {
+        string memory _methodName = 'safeTransferFrom';
+        _isZeroAddress(_from, _methodName, '_from');
+        _isZeroAddress(_to, _methodName, '_to');
+        _isValidTokenId(_tokenId, _methodName, '_tokenId');
+        _isAuthorized(_from, msg.sender, _tokenId, _methodName);
+&nbsp;
+        balanceOf[_from] -= 1;
+        balanceOf[_to] += 1;
+        approved[_tokenId] = _to;
+        ownerOf[_tokenId] = _to;
+        emit Transfer(_from, _to, _tokenId);
+&nbsp;
+        _isERC721TokenReceiver(_to, _tokenId, _methodName);
+    }
+&nbsp;
+    /// @notice Change or reaffirm the approved address for an NFT. An approved address can operate an NFT as
+    /// if was the owner.
+    /// @dev Set to zero address to indicates that there is no approved address
+    /// @dev Throw if msg.sender is not the current owner, an authorized operator, 
+    /// or the approved address for the NFT. Message: "approve - Not authorized"
+    /// @dev Throw if `_approved` is zero address. Message: "approve - Invalid parameter: _approved"
+    /// @dev Throw if `_tokenId` is invalid, AKA less then totalSupply. Message: 
+    /// "approve - Invalid parameter: _tokenId"
+    /// @param _approved The address of the new approved NFT controller
+    /// @param _tokenId The token identifier to approve
+    function approve(address _approved, uint256 _tokenId) external {
+        string memory _methodName = 'approve';
+        _isZeroAddress(_approved, _methodName, '_approved');
+        _isValidTokenId(_tokenId, _methodName, '_tokenId');
+        _isAuthorized(msg.sender, _approved, _tokenId, _methodName);
+&nbsp;
+        approved[_tokenId] = _approved;
+        emit Approval(msg.sender, _approved, _tokenId);
+    }
+&nbsp;
+    /// @notice Enable or disable approval for a third party "operator" to manage
+    ///  all of `msg.sender`'s assets
+    /// @dev The contract MUST allow multiple operators per owner
+    /// @dev Throw if msg.sender is not the current owner or an authorized operator. 
+    /// @dev Message: "setApprovalForAll - Not authorized"
+    /// @dev Throw if `_operator` is zero address. Message: "setApprovalForAll - Invalid parameter: _operator"
+    /// @dev If operation is revoking approval free space from storage
+    /// @param _operator The address to add as a new NFT authorized operators
+    /// @param _approved True if the operator is approved, false to revoke approval
+    function setApprovalForAll(address _operator, bool _approved) external {
+        string memory _methodName = 'setApprovalForAll';
+        _isZeroAddress(_operator, _methodName, '_operator');
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (_approved) {
+            operator[msg.sender][_operator] = true;
+        }
+        else {
+            delete operator[msg.sender][_operator]; // Free space
+        }
+        emit ApprovalForAll(msg.sender, _operator, _approved);
+    }
+&nbsp;
+    /**
+     * @notice Issues a new NFT in exchange for ethers at a parity of 1 NFT for 2 ethers
+     * @dev Throw if msg.value is less then 2 ethers. Message: "mint - Invalid ether amount"
+     * @dev Throw if `_recipient` is zero address. Message: "mint - Invalid parameter: _recipient"
+     * @dev Throw if `_uri` is empty. Message: mint - Invalid parameter: _uri"
+     * @param _recipient It is the recipient account for the new NFT
+     * @param _uri It is the uri for the new NFT
+     */
+    function mint(address _recipient, string memory _uri) external payable {
+        string memory _methodName = 'mint';
+        _isZeroAddress(_recipient, _methodName, '_recipient');
+        _isEmptyString(_uri, _methodName, '_uri');
+        if(msg.value &lt; 2 ether){
+            revert("mint - Invalid ether amount");
+        }
+        tokenID[tokenIndex] = true;
+        ownerOf[tokenIndex] = _recipient;
+        balanceOf[_recipient] += 1;
+        tokenURI[tokenIndex] = _uri;
+        emit Transfer(address(0), _recipient, tokenIndex);
+        tokenIndex++;
+        totalSupply++;
+    }
+&nbsp;
+    /**
+     * @notice Returns ethers in exchange for burning an NFT at a parity of 1 NFT for 2 ether
+     * @dev Throw if `_from` is zero address. Message: "burn - Invalid parameter: _from"
+     * @dev Throw if msg.sender is not the current owner, an authorized operator, 
+     * or the approved address for the NFT. Message: "burn - Not authorized"
+     * @dev Throw if `_from` account is not the owner of ´_tokenId´. Message: "burn - Not the owner"
+     * @param _from The address of the current owner of the NFT
+     * @param _tokenId The token identifier to approve
+     */
+    function burn(address _from, uint256 _tokenId) external {
+        string memory _methodName = 'burn';
+        _isZeroAddress(_from, _methodName, '_from');
+        _isAuthorized(_from, msg.sender, _tokenId, _methodName);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(ownerOf[_tokenId] != _from){
+<span class="cstat-no" title="statement not covered" >            revert("burn - Not the owner")</span>;
+        }
+&nbsp;
+        balanceOf[_from]--;
+        delete tokenID[_tokenId];
+        delete ownerOf[_tokenId];
+        delete tokenURI[_tokenId];
+        emit Transfer(_from, address(0), _tokenId);
+        totalSupply--;
+    }
+&nbsp;
+    function _concatMessage(string memory _methodName, string memory _message, string memory _parameterName) private pure returns(string memory) {
+        return string.concat(_methodName, _message, _parameterName);
+    }
+&nbsp;
+    function _isEmptyString(string memory _value, string memory _methodName, string memory _parameterName) private pure {
+        if (bytes(_value).length == 0) {
+            string memory _message = _concatMessage(_methodName, " - Invalid parameter: ", _parameterName);
+            revert(_message);
+        }
+    }
+&nbsp;
+    function _isZeroAddress(address _address, string memory _methodName, string memory _parameterName) private pure {
+        if (_address == address(0)) {
+            string memory _message = _concatMessage(_methodName, " - Invalid parameter: ", _parameterName);
+            revert(_message);
+        }
+    }
+&nbsp;
+    function _isAuthorized(address _owner, address _spender, uint256 _tokenId, string memory _methodName) private view {
+        if (ownerOf[_tokenId] != _owner &amp;&amp; operator[_owner][_spender] == false &amp;&amp; approved[_tokenId] != _owner){
+            string memory _message = _concatMessage(_methodName, " - Not authorized", "");
+            revert(_message);
+        }
+    }
+&nbsp;
+    /// @dev Throw if `_tokenId` is invalid, AKA less then totalSupply. Message: 
+    /// "safeTransferFrom - Invalid parameter: _tokenId"
+    function _isValidTokenId(uint256 _tokenId, string memory _methodName, string memory _parameterName) private view {
+        if (_tokenId &gt; totalSupply || <span class="branch-1 cbranch-no" title="branch not covered" >tokenID[_tokenId] == false</span>) {
+            string memory _message = _concatMessage(_methodName, " - Invalid parameter: ", _parameterName);
+            revert(_message);
+        }
+    }
+&nbsp;
+    function _isERC721TokenReceiver(address _address, uint256 _tokenID, string memory _methodName) private {
+        // Check if _address is a smart contract
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (_isSmartContractAddress(_address)) {
+            // This is the result of: bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))
+<span class="cstat-no" title="statement not covered" >            bytes4 ERC721_TokenReceiver_Hash = 0x150b7a02;</span>
+<span class="cstat-no" title="statement not covered" >            bytes memory _data;</span>
+<span class="cstat-no" title="statement not covered" >            bytes4 ERC721Received_result = IERC721TokenReceiver(_address).onERC721Received(_address, address(this), _tokenID, _data);</span>
+            
+            // Check that support NFT
+<span class="cstat-no" title="statement not covered" >            if (ERC721Received_result != ERC721_TokenReceiver_Hash) {</span>
+<span class="cstat-no" title="statement not covered" >                string memory _message = _concatMessage(_methodName, " - Not capable of receiving NFTs", "");</span>
+<span class="cstat-no" title="statement not covered" >                revert(_message)</span>;
+            }
+        }
+    }
+&nbsp;
+    function _isSmartContractAddress(address _address) private view returns (bool) {
+        bytes32 zeroAccountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+        bytes32 codeHash;    
+        assembly { codeHash := extcodehash(_address) }
+        return (codeHash != zeroAccountHash &amp;&amp; codeHash != 0x0);
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Sep 29 2022 17:16:05 GMT-0300 (Uruguay Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

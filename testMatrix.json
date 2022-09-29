@@ -1,0 +1,846 @@
+{
+ "contracts\\ERC721.sol": {
+  "51": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try send empty symbol",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "52": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try send empty symbol",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "53": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try send empty symbol",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "54": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "55": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "73": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _from zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _to zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "74": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _from zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _to zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "75": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _to zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "76": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "77": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "79": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "80": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "81": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "82": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "83": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "85": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "99": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _approved zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "100": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _approved zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "101": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "102": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "104": [
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "105": [
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "118": [
+   {
+    "title": "Try use _operator zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approval for All successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "119": [
+   {
+    "title": "Try use _operator zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approval for All successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "121": [
+   {
+    "title": "Approval for All successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "122": [
+   {
+    "title": "Approval for All successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "125": [],
+  "127": [
+   {
+    "title": "Approval for All successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "139": [
+   {
+    "title": "Try mint less that 2 amount",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _recipient is zero address ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "140": [
+   {
+    "title": "Try mint less that 2 amount",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _recipient is zero address ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "141": [
+   {
+    "title": "Try mint less that 2 amount",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "142": [
+   {
+    "title": "Try mint less that 2 amount",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "143": [
+   {
+    "title": "Try mint less that 2 amount",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "145": [
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "146": [
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "147": [
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "148": [
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "149": [
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "150": [
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "151": [
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "164": [
+   {
+    "title": "Try _from is zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "165": [
+   {
+    "title": "Try _from is zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "166": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "167": [
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "168": [],
+  "171": [
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "172": [
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "173": [
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "174": [
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "175": [
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "176": [
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "180": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try send empty symbol",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _recipient is zero address ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _operator zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _approved zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _from zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _to zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _from is zero address",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "184": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try send empty symbol",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint less that 2 amount",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "185": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try send empty symbol",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "186": [
+   {
+    "title": "Try send empty name",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try send empty symbol",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "191": [
+   {
+    "title": "Try mint less that 2 amount",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _recipient is zero address ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try mint _uri is empty ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Mint 2 successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _operator zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approval for All successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _approved zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _from zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _to zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _from is zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "192": [
+   {
+    "title": "Try mint _recipient is zero address ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _operator zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _approved zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _from zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _to zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _from is zero address",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "193": [
+   {
+    "title": "Try mint _recipient is zero address ",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _operator zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _approved zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _from zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _to zero address",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _from is zero address",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "198": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Burn NFT from _from account",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "199": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "200": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "207": [
+   {
+    "title": "Try use msg.sender not authorized",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Approve _approved successful",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "208": [
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "209": [
+   {
+    "title": "Try _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   },
+   {
+    "title": "Try use _tokenId is invalid",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "215": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "217": [],
+  "218": [],
+  "219": [],
+  "222": [],
+  "223": [],
+  "224": [],
+  "230": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "231": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "232": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ],
+  "233": [
+   {
+    "title": "Transfer successful",
+    "file": "test\\erc721.test.js"
+   }
+  ]
+ }
+}

@@ -1,6 +1,10 @@
 //SPDX-License-Identifier: MIT
 pragma solidity 0.8.16;
 
+import "./interfaces/IERC721TokenReceiver.sol";
+import "hardhat/console.sol";
+
+
  /// @notice This contact follows the standard for ERC-721 non fungible tokens
  /// @dev Comment follow the Ethereum ´Natural Specification´ language format (´natspec´)
  /// Referencia: https://docs.soliditylang.org/en/v0.8.16/natspec-format.html  
@@ -10,6 +14,7 @@ contract ERC721 {
     string public name;
     string public symbol;
     uint256 public totalSupply;
+    uint256 public tokenIndex;
 
     /// STATE MAPPINGS
     mapping(address => uint256) public balanceOf;
@@ -26,11 +31,11 @@ contract ERC721 {
     /// EVENTS
     /// @notice Trigger when NFTs are transferred, created (`from` == 0) and destroyed
     ///  (`to` == 0). Exception: during contract creation.
-    event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
+    event Transfer(address indexed _from, address indexed _to, uint256 _tokenId);
 
     /// @notice Trigger on any successful call to `approve` method. When approved address for
     /// an NFT is changed or reaffirmed
-    event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId);
+    event Approval(address indexed _owner, address indexed _approved, uint256 _tokenId);
 
     /// @notice Trigger when an operator is enabled or disabled for an owner.
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
@@ -43,7 +48,11 @@ contract ERC721 {
      * @param _symbol The symbol of the NFT collection
      */
     constructor(string memory _name, string memory _symbol) {
-        // TODO: Implement method
+        string memory _methodName = 'constructor';
+        _isEmptyString(_name, _methodName, '_name');
+        _isEmptyString(_symbol, _methodName, '_symbol');
+        name = _name;
+        symbol = _symbol;
     }
 
     /// EXTERNAL FUNCTIONS
@@ -61,7 +70,19 @@ contract ERC721 {
     /// @param _to The address of the new owner of the NFT
     /// @param _tokenId The token identifier of the NFT to transfer
     function safeTransferFrom(address _from, address _to, uint256 _tokenId) external {
-        // TODO: Implement method
+        string memory _methodName = 'safeTransferFrom';
+        _isZeroAddress(_from, _methodName, '_from');
+        _isZeroAddress(_to, _methodName, '_to');
+        _isValidTokenId(_tokenId, _methodName, '_tokenId');
+        _isAuthorized(_from, msg.sender, _tokenId, _methodName);
+
+        balanceOf[_from] -= 1;
+        balanceOf[_to] += 1;
+        approved[_tokenId] = _to;
+        ownerOf[_tokenId] = _to;
+        emit Transfer(_from, _to, _tokenId);
+
+        _isERC721TokenReceiver(_to, _tokenId, _methodName);
     }
 
     /// @notice Change or reaffirm the approved address for an NFT. An approved address can operate an NFT as
@@ -75,7 +96,13 @@ contract ERC721 {
     /// @param _approved The address of the new approved NFT controller
     /// @param _tokenId The token identifier to approve
     function approve(address _approved, uint256 _tokenId) external {
-        // TODO: Implement method
+        string memory _methodName = 'approve';
+        _isZeroAddress(_approved, _methodName, '_approved');
+        _isValidTokenId(_tokenId, _methodName, '_tokenId');
+        _isAuthorized(msg.sender, _approved, _tokenId, _methodName);
+
+        approved[_tokenId] = _approved;
+        emit Approval(msg.sender, _approved, _tokenId);
     }
 
     /// @notice Enable or disable approval for a third party "operator" to manage
@@ -88,7 +115,16 @@ contract ERC721 {
     /// @param _operator The address to add as a new NFT authorized operators
     /// @param _approved True if the operator is approved, false to revoke approval
     function setApprovalForAll(address _operator, bool _approved) external {
-        // TODO: Implement method
+        string memory _methodName = 'setApprovalForAll';
+        _isZeroAddress(_operator, _methodName, '_operator');
+
+        if (_approved) {
+            operator[msg.sender][_operator] = true;
+        }
+        else {
+            delete operator[msg.sender][_operator]; // Free space
+        }
+        emit ApprovalForAll(msg.sender, _operator, _approved);
     }
 
     /**
@@ -99,8 +135,20 @@ contract ERC721 {
      * @param _recipient It is the recipient account for the new NFT
      * @param _uri It is the uri for the new NFT
      */
-    function mint(address _recipient, string memory _uri) external {
-        // TODO: Implement method
+    function mint(address _recipient, string memory _uri) external payable {
+        string memory _methodName = 'mint';
+        _isZeroAddress(_recipient, _methodName, '_recipient');
+        _isEmptyString(_uri, _methodName, '_uri');
+        if(msg.value < 2 ether){
+            revert("mint - Invalid ether amount");
+        }
+        tokenID[tokenIndex] = true;
+        ownerOf[tokenIndex] = _recipient;
+        balanceOf[_recipient] += 1;
+        tokenURI[tokenIndex] = _uri;
+        emit Transfer(address(0), _recipient, tokenIndex);
+        tokenIndex++;
+        totalSupply++;
     }
 
     /**
@@ -113,6 +161,75 @@ contract ERC721 {
      * @param _tokenId The token identifier to approve
      */
     function burn(address _from, uint256 _tokenId) external {
-        // TODO: Implement method
+        string memory _methodName = 'burn';
+        _isZeroAddress(_from, _methodName, '_from');
+        _isAuthorized(_from, msg.sender, _tokenId, _methodName);
+        if(ownerOf[_tokenId] != _from){
+            revert("burn - Not the owner");
+        }
+
+        balanceOf[_from]--;
+        delete tokenID[_tokenId];
+        delete ownerOf[_tokenId];
+        delete tokenURI[_tokenId];
+        emit Transfer(_from, address(0), _tokenId);
+        totalSupply--;
+    }
+
+    function _concatMessage(string memory _methodName, string memory _message, string memory _parameterName) private pure returns(string memory) {
+        return string.concat(_methodName, _message, _parameterName);
+    }
+
+    function _isEmptyString(string memory _value, string memory _methodName, string memory _parameterName) private pure {
+        if (bytes(_value).length == 0) {
+            string memory _message = _concatMessage(_methodName, " - Invalid parameter: ", _parameterName);
+            revert(_message);
+        }
+    }
+
+    function _isZeroAddress(address _address, string memory _methodName, string memory _parameterName) private pure {
+        if (_address == address(0)) {
+            string memory _message = _concatMessage(_methodName, " - Invalid parameter: ", _parameterName);
+            revert(_message);
+        }
+    }
+
+    function _isAuthorized(address _owner, address _spender, uint256 _tokenId, string memory _methodName) private view {
+        if (ownerOf[_tokenId] != _owner && operator[_owner][_spender] == false && approved[_tokenId] != _owner){
+            string memory _message = _concatMessage(_methodName, " - Not authorized", "");
+            revert(_message);
+        }
+    }
+
+    /// @dev Throw if `_tokenId` is invalid, AKA less then totalSupply. Message: 
+    /// "safeTransferFrom - Invalid parameter: _tokenId"
+    function _isValidTokenId(uint256 _tokenId, string memory _methodName, string memory _parameterName) private view {
+        if (_tokenId > totalSupply || tokenID[_tokenId] == false) {
+            string memory _message = _concatMessage(_methodName, " - Invalid parameter: ", _parameterName);
+            revert(_message);
+        }
+    }
+
+    function _isERC721TokenReceiver(address _address, uint256 _tokenID, string memory _methodName) private {
+        // Check if _address is a smart contract
+        if (_isSmartContractAddress(_address)) {
+            // This is the result of: bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))
+            bytes4 ERC721_TokenReceiver_Hash = 0x150b7a02;
+            bytes memory _data;
+            bytes4 ERC721Received_result = IERC721TokenReceiver(_address).onERC721Received(_address, address(this), _tokenID, _data);
+            
+            // Check that support NFT
+            if (ERC721Received_result != ERC721_TokenReceiver_Hash) {
+                string memory _message = _concatMessage(_methodName, " - Not capable of receiving NFTs", "");
+                revert(_message);
+            }
+        }
+    }
+
+    function _isSmartContractAddress(address _address) private view returns (bool) {
+        bytes32 zeroAccountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;
+        bytes32 codeHash;    
+        assembly { codeHash := extcodehash(_address) }
+        return (codeHash != zeroAccountHash && codeHash != 0x0);
     }
 }
